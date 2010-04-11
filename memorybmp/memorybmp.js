@@ -56,8 +56,17 @@ $(window).keydown(function(e) {
 	if( e.which == 68 ) zoomOut();
     });
 
+var mousedown = 0;
 $(window).load(function() {
 	$("<button>Zoom in</button>").click(zoomIn).appendTo("body");
 	$("<button>Zoom out</button>").click(zoomOut).appendTo("body");
+	$("<input id='color' value='blue'/>").appendTo("body");
 	$("td").click(rewindBit);
+	$(window).mousedown(function() { mousedown = 1; });
+	$(window).mouseup(function() { mousedown = 0; });
+	$("td").mouseover(function() {
+		if( !mousedown ) return;
+		var color = $("#color").val();
+		$(this).css("backgroundColor", color);
+	    });
     });
