@@ -19,6 +19,10 @@ setup(name='memorybmp',
       zip_safe=False,
       install_requires=[
           'PasteDeploy',
+          'sven',
+          'WebOb',
+          #'PIL',
+          #'bzrlib',
       ],
       entry_points="""
       """,
