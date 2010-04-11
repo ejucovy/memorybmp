@@ -1,0 +1,29 @@
+<html><head><title>/tmp/test.bmp/</title><body>
+  <table style="width: 5px; height: 2px; border-collapse: collapse;">
+
+<tr>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+</tr>
+<tr>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+<td style="background-color: red;
+           padding: 0; height: 1px; width: 1px;"></td>
+</tr>
+  </table>
+</body></html>
