@@ -33,7 +33,6 @@ class WebApp(object):
         if partial: del req.GET['async']
         del req.GET['file']
         if not req.GET:
-            subprocess.call(['bzr', 'revert', filename])
             return self.render(filename, partial)(environ, start_response)
         if 'logfor' in req.GET:
             x, y = req.GET['logfor'].split('-')
@@ -49,6 +48,7 @@ class WebApp(object):
                 q = qs(req.GET)
                 if partial: return exc.HTTPBadRequest()(environ, start_response)
                 return redirect(req)(environ, start_response)
+        subprocess.call(['bzr', 'revert', filename])
         return self.render(filename, partial)(environ, start_response)
 
     def show_versions(self, filename, x, y):
@@ -59,7 +59,6 @@ class WebApp(object):
     def render(self, filename, partial=None):
         res = Response()
         render(filename, res.body_file, partial or False)
-        subprocess.call(['bzr', 'revert', filename])
         return res
 
     
